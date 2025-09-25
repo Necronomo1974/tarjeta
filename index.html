@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tarjeta de presentación digital corporativa" />
+  <title>Grupo Call Chile</title>
+  <style>
+    /* === RESET Y BASE === */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --color-primary: #101213;
+      --color-secondary: #3498db;
+      --color-light: #ecf0f1;
+      --color-text: #2c3e50;
+      --color-muted: #7f8c8d;
+      --color-border: #bdc3c7;
+      --transition: all 0.3s ease;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--color-text);
+      background-color: #a3d5f7;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .section {
+      padding: 20px;
+      border-radius: 12px;
+      background-color: var(--color-light);
+      box-shadow: 0 2px 10px hsl(0, 12%, 93%);
+      transition: var(--transition);
+    }
+    .section:hover {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    .logo-container {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .logo {
+      max-width: 360px;
+      height: auto;
+      opacity: 0.9;
+    }
+    .company-info {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .company-info p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      display: inline-block;
+      color: var(--color-secondary);
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .social-link:hover {
+      color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .product-image {
+      width: 100%;
+      height: 120px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .product-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--color-primary);
+    }
+    .product-description {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+    .branches-list {
+      list-style: none;
+    }
+    .branch-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .branch-item:last-child {
+      border-bottom: none;
+    }
+    .branch-name {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .branch-contact p {
+      margin: 4px 0;
+      font-size: 0.95rem;
+    }
+    .representative {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .representative-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+    .representative-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .representative-info h3 {
+      margin-bottom: 6px;
+      color: var(--color-primary);
+    }
+    .representative-info p {
+      margin: 4px 0;
+      font-size: 0.95rem;
+    }
+    .sharing-note {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      background-color: var(--color-light);
+      border-radius: 12px;
+    }
+    a {
+      color: var(--color-secondary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 10px; gap: 20px; }
+      .section { padding: 16px; }
+      .section-title { font-size: 1.25rem; }
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- === SECCIÓN: DATOS DE LA EMPRESA === -->
+    <section class="section" id="empresa">
+      <h2 class="section-title">Holding Empresarial</h2>
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Logo de Grupo Call Chile" class="logo" />
+      </div>
+      <div class="company-info">
+        <p>
+          <strong>
+            <a href="https://www.grupocallchile.cl" target="_blank" style="text-decoration:none; color:inherit; font-size:1.5rem;">
+              GRUPO CALL CHILE
+            </a>
+          </strong>
+        </p>
+        <p>Ruta K175, Molina, Región del Maule, Chile</p>
+        <p>Email: <a href="mailto:info@grupocallchile.cl">info@grupocallchile.cl</a></p>
+        <p>Teléfono: <a href="tel:+56953890652">+56 9 5389 0652</a></p>
+        <p>Web: <a href="https://www.grupocall.com" target="_blank">www.grupocall.com</a></p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="LinkedIn">🔗 LinkedIn</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸 Instagram</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦 Twitter</a>
+          <a href="https://www.facebook.com/grupocallchile" class="social-link" aria-label="Facebook" target="_blank">📘 Facebook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === SECCIÓN: PRODUCTOS O SERVICIOS === -->
+    <section class="section" id="productos">
+      <h2 class="section-title">Productos y Servicios</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="apicola.jpg" alt="Apícola">
+          </div>
+          <h3 class="product-title">Apícola</h3>
+          <p class="product-description">Dedicada a producir miel pura y derivados naturales, garantizando calidad, sustentabilidad y compromiso.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="fruticola.jpg" alt="Frutícola">
+          </div>
+          <h3 class="product-title">Frutícola</h3>
+          <p class="product-description">Especializados en producción y exportación de frutas frescas y congeladas IQF.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="vitivinicola.jpg" alt="Vitivinícola">
+          </div>
+          <h3 class="product-title">Vitivinícola</h3>
+          <p class="product-description">Dedicados a la elaboración de vinos de excelencia, combinando tradición y tecnología de vanguardia.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="mineria.jpg" alt="Minería">
+          </div>
+          <h3 class="product-title">Minería</h3>
+          <p class="product-description">Enfocados en la extracción responsable, aplicando innovación, seguridad y bienestar laboral.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === SECCIÓN: FILIALES === -->
+    <section class="section" id="filiales">
+      <h2 class="section-title">Nuestras Sucursales en Chile</h2>
+      <ul class="branches-list">
+        <li class="branch-item">
+          <div class="branch-name">Viña del Mar</div>
+          <div class="branch-contact">
+            <p>Dirección: Av. Jorge Montt, Viña del Mar, Chile</p>
+            <p>Teléfono: <a href="tel:+56953890652">+56 9 5389 0652</a></p>
+            <p>Email: <a href="mailto:vicente.delsol@grupocallchile.cl">vicente.delsol@grupocallchile.cl</a></p>
+          </div>
+        </li>
+        <li class="branch-item">
+          <div class="branch-name">Curicó</div>
+          <div class="branch-contact">
+            <p>Dirección: René León Echaiz 320, Curicó, Chile</p>
+            <p>Teléfono: <a href="tel:+56999044229">+56 9 9904 4229</a></p>
+            <p>Email: <a href="mailto:vicente.delsol@grupocall.com">vicente.delsol@grupocall.com</a></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- === SECCIÓN: REPRESENTANTE === -->
+    <section class="section" id="representante">
+      <h2 class="section-title">Contacto Directo</h2>
+      <div class="representative">
+        <div class="representative-photo">
+          <img src="vicente.jpg" alt="Vicente Sebastián Del Sol Lagos">
+        </div>
+        <div class="representative-info">
+          <h3>Vicente Sebastián Del Sol Lagos</h3>
+          <p>Cargo: Gerente General</p>
+          <p>
+            <a href="mailto:vicente.delsol@grupocallchile.cl">vicente.delsol@grupocallchile.cl</a><br>
+            <a href="mailto:vicente.delsol@grupocall.com">vicente.delsol@grupocall.com</a>
+          </p>
+          <p>
+            <a href="tel:+56999044229">+56 9 9904 4229</a><br>
+            <a href="tel:+56953890652">+56 9 5389 0652</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === SECCIÓN: NOTA DE COMPARTIR === -->
+    <section class="sharing-note">
+      <p>Esta tarjeta digital es totalmente editable. Sube este archivo HTML a GitHub Pages, Netlify o Vercel y compártelo mediante un enlace permanente.</p>
+    </section>
+
+  </div>
+</body>
+</html>
+
