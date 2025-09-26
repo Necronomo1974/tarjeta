@@ -50,14 +50,25 @@
       font-weight: 600;
     }
     .logo-container {
-      text-align: center;
-      margin-bottom: 16px;
-    }
-    .logo {
-      max-width: 360px;
-      height: auto;
-      opacity: 0.9;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 12px; /* Evita que toque los bordes en móviles */
+}
+
+.logo {
+  max-width: 80%;
+  height: auto;
+  opacity: 0.9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
     .company-info {
       text-align: center;
       margin-top: 10px;
@@ -306,6 +317,7 @@
   </div>
 </body>
 </html>
+
 
 
 
